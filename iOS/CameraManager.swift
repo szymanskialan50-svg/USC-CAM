@@ -29,11 +29,11 @@ class CameraManager: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     private func setupHighResCamera() {
         captureSession.beginConfiguration()
 
-        // Configure highest resolution (4K 2160p or 1440p fallback)
+        // Configure highest resolution (4K 2160p or 1080p fallback)
         if captureSession.canSetSessionPreset(.hd4K3840x2160) {
             captureSession.sessionPreset = .hd4K3840x2160
-        } else if captureSession.canSetSessionPreset(.iFrame1440x1080) {
-            captureSession.sessionPreset = .iFrame1440x1080
+        } else if captureSession.canSetSessionPreset(.hd1920x1080) {
+            captureSession.sessionPreset = .hd1920x1080
         } else {
             captureSession.sessionPreset = .high
         }
