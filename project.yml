@@ -1,0 +1,18 @@
+name: USBWebcam
+options:
+  bundleIdPrefix: com.eni.lo
+targets:
+  USBWebcam:
+    type: application
+    platform: iOS
+    deploymentTarget: "14.0"
+    sources: [iOS]
+    info:
+      path: iOS/Info.plist
+      properties:
+        UILaunchStoryboardName: LaunchScreen
+    settings:
+      CODE_SIGNING_ALLOWED: NO
+      CODE_SIGNING_REQUIRED: NO
+      CODE_SIGN_IDENTITY: ""
+      ENABLE_BITCODE: NO
